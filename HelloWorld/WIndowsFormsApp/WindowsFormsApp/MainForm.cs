@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp.SQLServer;
 
 namespace WindowsFormsApp
 {
@@ -28,7 +29,7 @@ namespace WindowsFormsApp
 
         private void OpenForm_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            var form2 = new SampleForm();
             form2.FormClosed += new FormClosedEventHandler(otherFormClosed);
             form2.Show();
             this.Hide();
@@ -42,7 +43,15 @@ namespace WindowsFormsApp
 
         private void SendRequest_Click(object sender, EventArgs e)
         {
-            SendRequestFrom requestForm = new SendRequestFrom();
+            var requestForm = new SendRequestFrom();
+            requestForm.FormClosed += new FormClosedEventHandler(otherFormClosed);
+            requestForm.Show();
+            this.Hide();
+        }
+
+        private void SQLServer_Click(object sender, EventArgs e)
+        {
+            var requestForm = new SQLServerForm();
             requestForm.FormClosed += new FormClosedEventHandler(otherFormClosed);
             requestForm.Show();
             this.Hide();

@@ -33,7 +33,7 @@
             this.NewFrom = new System.Windows.Forms.Button();
             this.SendRequest = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SQLServer = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -86,14 +86,15 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // SQLServer
             // 
-            this.button3.Location = new System.Drawing.Point(40, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(587, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SQLServer.Location = new System.Drawing.Point(40, 147);
+            this.SQLServer.Name = "SQLServer";
+            this.SQLServer.Size = new System.Drawing.Size(587, 23);
+            this.SQLServer.TabIndex = 5;
+            this.SQLServer.Text = "SQLServer";
+            this.SQLServer.UseVisualStyleBackColor = true;
+            this.SQLServer.Click += new System.EventHandler(this.SQLServer_Click);
             // 
             // button4
             // 
@@ -110,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 435);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.SQLServer);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.SendRequest);
             this.Controls.Add(this.NewFrom);
@@ -130,7 +131,7 @@
         private System.Windows.Forms.Button NewFrom;
         private System.Windows.Forms.Button SendRequest;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SQLServer;
         private System.Windows.Forms.Button button4;
     }
 }

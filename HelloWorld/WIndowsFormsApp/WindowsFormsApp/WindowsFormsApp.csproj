@@ -35,6 +35,9 @@
     <StartupObject>WindowsFormsApp.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,11 +57,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="SampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="SampleForm.Designer.cs">
+      <DependentUpon>SampleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,11 +71,18 @@
     <Compile Include="SendRequestFrom.Designer.cs">
       <DependentUpon>SendRequestFrom.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLServer\Sample_Table.cs" />
+    <Compile Include="SQLServer\SQLServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLServer\SQLServerForm.Designer.cs">
+      <DependentUpon>SQLServerForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="SampleForm.resx">
+      <DependentUpon>SampleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +96,10 @@
     <EmbeddedResource Include="SendRequestFrom.resx">
       <DependentUpon>SendRequestFrom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SQLServer\SQLServerForm.resx">
+      <DependentUpon>SQLServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
